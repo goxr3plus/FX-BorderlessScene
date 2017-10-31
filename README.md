@@ -7,22 +7,21 @@ This project has been forked and further developed from this github repository -
 
 ### Use it with Maven , Gradle etc ... with https://jitpack.io/#goxr3plus/FX-BorderlessScene
 
-```
+``` XML
 <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-  ```
+   <repository>
+     <id>jitpack.io</id>
+     <url>https://jitpack.io</url>
+   </repository>
+</repositories>
+```
   
-  ```
+  ``` XML
   <dependency>
-	    <groupId>com.github.goxr3plus</groupId>
-	    <artifactId>FX-BorderlessScene</artifactId>
-	    <version>V1.0.0</version>
-	</dependency>
-  
+    <groupId>com.github.goxr3plus</groupId>
+    <artifactId>FX-BorderlessScene</artifactId>
+    <version>V1.0.0</version>
+  </dependency>
   ```
 
 ### Example Tester 
