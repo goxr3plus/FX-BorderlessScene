@@ -72,7 +72,7 @@ public class Main extends Application {
 		scene.setMoveControl(topLabel);
 		
 		// To disable resize:
-		scene.setResizable(false);
+		//scene.setResizable(false);
 		
 		// To switch the content during runtime:
 		//scene.setContent(yourNewParent);
