@@ -173,4 +173,13 @@ public class BorderlessScene extends Scene {
 			controller.prevPos.y = stage.getY();
 		return controller.prevPos;
 	}
+	
+	/**
+	 * Removes the default css style of the corners
+	 */
+	public void removeDefaultCSS() {
+		
+		this.root.getStylesheets().remove(0);
+		
+	}
 }
