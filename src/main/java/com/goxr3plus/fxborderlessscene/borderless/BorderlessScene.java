@@ -65,7 +65,7 @@ public class BorderlessScene extends Scene {
 			
 			// Load the FXML
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("Borderless.fxml"));
+			loader.setLocation(getClass().getResource("/fxml/Borderless.fxml"));
 			this.root = loader.load();
 			
 			// Set Scene root
