@@ -20,7 +20,7 @@ This project has been forked and further developed from this github repository -
   <dependency>
     <groupId>com.github.goxr3plus</groupId>
     <artifactId>FX-BorderlessScene</artifactId>
-    <version>V1.0.0</version>
+    <version>V1.1.0</version>
   </dependency>
   ```
 
