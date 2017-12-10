@@ -5,7 +5,7 @@
 
 	<groupId>com.github.goxr3plus</groupId>
 	<artifactId>FX-BorderlessScene</artifactId>
-	<version>1.1.0</version>
+	<version>2.0.0</version>
 	<name>FX-BorderlessScene</name>
 	<description>Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.</description>
 	<url>https://github.com/goxr3plus/FX-BorderlessScene</url>
@@ -84,6 +84,26 @@
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+			
+			<!-- Copy Assemply dependency -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<descriptors>
+						<descriptor>src/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>create-archive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
