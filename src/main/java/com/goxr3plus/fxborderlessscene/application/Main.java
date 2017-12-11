@@ -37,7 +37,7 @@ public class Main extends Application {
 		closeButton.setOnAction(a -> primaryStage.close());
 		
 		// Constructor using your primary stage and the root Parent of your content.
-		BorderlessScene scene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, borderPane, 100, 100);
+		BorderlessScene scene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, borderPane, 250, 250);
 		primaryStage.setScene(scene); // Set the scene to your stage and you're done!
 		
 		//Close Button
