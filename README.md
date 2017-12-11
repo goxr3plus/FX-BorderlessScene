@@ -7,6 +7,8 @@ This project has been forked and further developed from this github repository -
 
 ### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
 
+---
+
 ### Use it with Maven , Gradle etc ... with 
 
 https://jitpack.io/#goxr3plus/FX-BorderlessScene
