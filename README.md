@@ -5,7 +5,11 @@ Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, clos
 
 This project has been forked and further developed from this github repository -> https://github.com/NicolasSenetLarson/BorderlessScene
 
-### Use it with Maven , Gradle etc ... with https://jitpack.io/#goxr3plus/FX-BorderlessScene
+### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
+
+### Use it with Maven , Gradle etc ... with 
+
+https://jitpack.io/#goxr3plus/FX-BorderlessScene
 
 ``` XML
 <repositories>
@@ -20,7 +24,7 @@ This project has been forked and further developed from this github repository -
   <dependency>
     <groupId>com.github.goxr3plus</groupId>
     <artifactId>FX-BorderlessScene</artifactId>
-    <version>V1.1.0</version>
+    <version>V2.0.0</version>
   </dependency>
   ```
 
