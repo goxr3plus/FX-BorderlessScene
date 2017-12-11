@@ -74,6 +74,7 @@ public class Main extends Application {
 		//scene.getWindowedPosition();
 		
 		//Show
+		primaryStage.setTitle("Draggable and Undecorated JavaFX Window");
 		primaryStage.show();
 		
 	}

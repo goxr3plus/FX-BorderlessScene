@@ -12,10 +12,10 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import main.java.com.goxr3plus.fxborderlessscene.window.TransparentWindow;
 
 /**
- * Controller implements window controls: maximize, minimize, drag, and Aero
- * Snap.
+ * Controller implements window controls: maximize, minimize, drag, and Aero Snap.
  * 
  * @author Nicolas Senet-Larson
  * @author GOXR3PLUS STUDIO
@@ -73,6 +73,8 @@ public class BorderlessController {
 	/** The bottom. */
 	String bottom = "bottom";
 	
+	private TransparentWindow transparentWindow;
+	
 	/**
 	 * The constructor.
 	 */
@@ -81,6 +83,18 @@ public class BorderlessController {
 		prevPos = new Delta();
 		maximized = new ReadOnlyBooleanWrapper(false);
 		snapped = false;
+		
+	}
+	
+	/**
+	 * Creates the Transparent Window
+	 * 
+	 * @param parentWindow
+	 */
+	public void createTransparentWindow(Stage parentWindow) {
+		
+		transparentWindow = new TransparentWindow();
+		transparentWindow.getWindow().initOwner(parentWindow);
 	}
 	
 	/**
@@ -176,8 +190,7 @@ public class BorderlessController {
 	}
 	
 	/**
-	 * Set a node that can be pressed and dragged to move the application
-	 * around.
+	 * Set a node that can be pressed and dragged to move the application around.
 	 * 
 	 * @param node
 	 *            the node.
@@ -237,6 +250,113 @@ public class BorderlessController {
 					stage.setHeight(prevSize.y);
 					setMaximized(false);
 				}
+				
+				//--------------------------Check here for Transparent Window--------------------------
+				//Rectangle2D wholeScreen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getBounds()
+				Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
+				
+				//----------TO BE ADDED IN FUTURE RELEASE , GAVE ME CANCER implementing them ..----------------
+				
+				//				// Aero Snap Top Right Corner
+				//				if (m.getScreenY() <= screen.getMinY() && m.getScreenX() >= screen.getMaxX() - 1) {
+				//					double difference;
+				//					
+				//					//Fix the positioning
+				//					if (wholeScreen.getMaxX() > screen.getMaxX())
+				//						difference = - ( wholeScreen.getWidth() - screen.getWidth() );
+				//					else
+				//						difference =  (wholeScreen.getWidth() - screen.getWidth()-15);
+				//					
+				//					System.out.println(difference);
+				//					
+				//					transparentWindow.getWindow().setX(wholeScreen.getWidth() / 2 + difference);
+				//					transparentWindow.getWindow().setY(screen.getMinY());
+				//					transparentWindow.getWindow().setWidth(screen.getWidth() / 2);
+				//					transparentWindow.getWindow().setHeight(screen.getHeight() / 2);
+				//					
+				//					transparentWindow.show();
+				//				}
+				//				
+				//				// Aero Snap Top Left Corner
+				//				else if (m.getScreenY() <= screen.getMinY() && m.getScreenX() <= screen.getMinX()) {
+				//					
+				//					transparentWindow.getWindow().setX(screen.getMinX());
+				//					transparentWindow.getWindow().setY(screen.getMinY());
+				//					transparentWindow.getWindow().setWidth(screen.getWidth() / 2);
+				//					transparentWindow.getWindow().setHeight(screen.getHeight() / 2);
+				//					
+				//					transparentWindow.show();
+				//				}
+				//				
+				//				// Aero Snap Bottom Right Corner
+				//				else if (m.getScreenY() >= screen.getMaxY() - 1 && m.getScreenX() >= screen.getMaxY()) {
+				//					
+				//					transparentWindow.getWindow().setX(wholeScreen.getWidth() / 2 - ( wholeScreen.getWidth() - screen.getWidth() ));
+				//					transparentWindow.getWindow().setY(wholeScreen.getHeight() / 2 - ( wholeScreen.getHeight() - screen.getHeight() ));
+				//					transparentWindow.getWindow().setWidth(wholeScreen.getWidth() / 2);
+				//					transparentWindow.getWindow().setHeight(wholeScreen.getHeight() / 2);
+				//					
+				//					transparentWindow.show();
+				//				}
+				//				
+				//				// Aero Snap Bottom Left Corner
+				//				else if (m.getScreenY() >= screen.getMaxY() - 1 && m.getScreenX() <= screen.getMinX()) {
+				//					
+				//					transparentWindow.getWindow().setX(screen.getMinX());
+				//					transparentWindow.getWindow().setY(wholeScreen.getHeight() / 2 - ( wholeScreen.getHeight() - screen.getHeight() ));
+				//					transparentWindow.getWindow().setWidth(wholeScreen.getWidth() / 2);
+				//					transparentWindow.getWindow().setHeight(wholeScreen.getHeight() / 2);
+				//					
+				//					transparentWindow.show();
+				//				}
+				
+				// Aero Snap Left.
+				if (m.getScreenX() <= screen.getMinX()) {
+					transparentWindow.getWindow().setY(screen.getMinY());
+					transparentWindow.getWindow().setHeight(screen.getHeight());
+					
+					transparentWindow.getWindow().setX(screen.getMinX());
+					if (screen.getWidth() / 2 < transparentWindow.getWindow().getMinWidth()) {
+						transparentWindow.getWindow().setWidth(transparentWindow.getWindow().getMinWidth());
+					} else {
+						transparentWindow.getWindow().setWidth(screen.getWidth() / 2);
+					}
+					
+					transparentWindow.show();
+				}
+				
+				// Aero Snap Right.
+				else if (m.getScreenX() >= screen.getMaxX() - 1) {
+					transparentWindow.getWindow().setY(screen.getMinY());
+					transparentWindow.getWindow().setHeight(screen.getHeight());
+					
+					if (screen.getWidth() / 2 < transparentWindow.getWindow().getMinWidth()) {
+						transparentWindow.getWindow().setWidth(transparentWindow.getWindow().getMinWidth());
+					} else {
+						transparentWindow.getWindow().setWidth(screen.getWidth() / 2);
+					}
+					transparentWindow.getWindow().setX(screen.getMaxX() - transparentWindow.getWindow().getWidth());
+					
+					transparentWindow.show();
+				}
+				
+				// Aero Snap Top. || Aero Snap Bottom.
+				else if (m.getScreenY() <= screen.getMinY() || m.getScreenY() >= screen.getMaxY() - 1) {
+					
+					transparentWindow.getWindow().setX(screen.getMinX());
+					transparentWindow.getWindow().setY(screen.getMinY());
+					transparentWindow.getWindow().setWidth(screen.getWidth());
+					transparentWindow.getWindow().setHeight(screen.getHeight());
+					
+					transparentWindow.show();
+					
+				} else {
+					transparentWindow.close();
+				}
+				
+				//				System.out.println("Mouse Position [ " + m.getScreenX() + "," + m.getScreenY() + " ]")
+				//				System.out.println(" " + screen.getMinX() + "," + screen.getMinY() + " ," + screen.getMaxX() + " ," + screen.getMaxY())
+				//				System.out.println()
 			}
 		});
 		
@@ -252,7 +372,7 @@ public class BorderlessController {
 				Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
 				
 				// Aero Snap Left.
-				if (m.getScreenX() == screen.getMinX()) {
+				if (m.getScreenX() <= screen.getMinX()) {
 					stage.setY(screen.getMinY());
 					stage.setHeight(screen.getHeight());
 					
@@ -267,7 +387,7 @@ public class BorderlessController {
 				}
 				
 				// Aero Snap Right.
-				else if (m.getScreenX() == screen.getMaxX() - 1) {
+				else if (m.getScreenX() >= screen.getMaxX() - 1) {
 					stage.setY(screen.getMinY());
 					stage.setHeight(screen.getHeight());
 					
@@ -281,8 +401,8 @@ public class BorderlessController {
 					snapped = true;
 				}
 				
-				// Aero Snap Top.
-				else if (m.getScreenY() == screen.getMinY()) {
+				// Aero Snap Top ||  Aero Snap Bottom
+				else if (m.getScreenY() <= screen.getMinY() || m.getScreenY() >= screen.getMaxY() - 1) {
 					if (!screen.contains(prevPos.x, prevPos.y)) {
 						if (prevSize.x > screen.getWidth())
 							prevSize.x = screen.getWidth() - 20;
@@ -300,7 +420,15 @@ public class BorderlessController {
 					stage.setHeight(screen.getHeight());
 					setMaximized(true);
 				}
+				
+				//				System.out.println("Mouse Position [ " + m.getScreenX() + "," + m.getScreenY() + " ]")
+				//				System.out.println(" " + screen.getMinX() + "," + screen.getMinY() + " ," + screen.getMaxX() + " ," + screen.getMaxY())
+				//				System.out.println()
+				
 			}
+			
+			//Hide the transparent window
+			transparentWindow.close();
 		});
 	}
 	
@@ -310,8 +438,7 @@ public class BorderlessController {
 	 * @param pane
 	 *            the pane the action is set to.
 	 * @param direction
-	 *            the resize direction. Diagonal: 'top' or 'bottom' + 'right' or
-	 *            'left'.
+	 *            the resize direction. Diagonal: 'top' or 'bottom' + 'right' or 'left'.
 	 */
 	private void setResizeControl(Pane pane , final String direction) {
 		

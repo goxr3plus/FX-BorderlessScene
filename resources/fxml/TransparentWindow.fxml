@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+
+
+<fx:root fx:id="stackPane" prefHeight="415.0" prefWidth="620.0" style="-fx-background-color: rgb(0,0,0,0.3); -fx-border-color: orange; -fx-border-width: 2;" type="StackPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+	<!-- TODO Add Nodes -->
+</fx:root>

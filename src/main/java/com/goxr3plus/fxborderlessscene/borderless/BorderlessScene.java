@@ -16,8 +16,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 /**
- * Undecorated JavaFX Scene with implemented move, resize, minimize, maximize
- * and Aero Snap.
+ * Undecorated JavaFX Scene with implemented move, resize, minimize, maximize and Aero Snap.
  * 
  * Usage:
  * 
@@ -49,8 +48,7 @@ public class BorderlessScene extends Scene {
 	 * @param stage
 	 *            your stage.
 	 * @param stageStyle
-	 *            <b>Undecorated</b> and <b>Transparent</b> StageStyles are
-	 *            accepted or else the Transparent StageStyle will be set.
+	 *            <b>Undecorated</b> and <b>Transparent</b> StageStyles are accepted or else the Transparent StageStyle will be set.
 	 * @param sceneRoot
 	 *            The root of the Scene
 	 * @param minWidth
@@ -75,6 +73,7 @@ public class BorderlessScene extends Scene {
 			// Initialize the Controller
 			this.controller = loader.getController();
 			this.controller.setStage(stage);
+			this.controller.createTransparentWindow(stage);
 			
 			// StageStyle
 			stage.initStyle(stageStyle);
@@ -105,8 +104,7 @@ public class BorderlessScene extends Scene {
 	}
 	
 	/**
-	 * Set a node that can be pressed and dragged to move the application
-	 * around.
+	 * Set a node that can be pressed and dragged to move the application around.
 	 * 
 	 * @param node
 	 *            the node.
