@@ -73,6 +73,9 @@ public class BorderlessController {
 	/** The bottom. */
 	String bottom = "bottom";
 	
+	/**
+	 * Transparent Window used to show how the window will be resized
+	 */
 	private TransparentWindow transparentWindow;
 	
 	/**
@@ -90,6 +93,7 @@ public class BorderlessController {
 	 * Creates the Transparent Window
 	 * 
 	 * @param parentWindow
+	 *            The parentWindow of the TransparentWindow
 	 */
 	public void createTransparentWindow(Stage parentWindow) {
 		
@@ -446,16 +450,16 @@ public class BorderlessController {
 			if (m.isPrimaryButtonDown()) {
 				double width = stage.getWidth();
 				double height = stage.getHeight();
-				int mX = (int) m.getX();
-				int mY = (int) m.getY();
+				//int mX = (int) m.getX()
+				//int mY = (int) m.getY()
 				
 				// Horizontal resize.
 				if (direction.endsWith("left") && ( ( width > stage.getMinWidth() ) || ( m.getX() < 0 ) )) {
-					//System.out.println("Entered X1");
+					//System.out.println("Entered X1")
 					stage.setWidth(width - m.getScreenX() + stage.getX());
 					stage.setX(m.getScreenX());
 				} else if (direction.endsWith("right")) {
-					//System.out.println("Entered X2 , " + width + " , " + m.getX());
+					//System.out.println("Entered X2 , " + width + " , " + m.getX())
 					if ( ( width + m.getX() ) < 0 || m.getScreenX() < ( stage.getX() + stage.getMinWidth() ))
 						return;
 					stage.setWidth(width + m.getX());
@@ -475,7 +479,7 @@ public class BorderlessController {
 						stage.setY(prevPos.y);
 						snapped = false;
 					} else {
-						//System.out.println("Entered X4 , " + height + " , " + mY);
+						//System.out.println("Entered X4 , " + height + " , " + mY)
 						if ( ( height + m.getY() ) < 0 || m.getScreenY() < ( stage.getY() + stage.getMinHeight() ))
 							return;
 						stage.setHeight(height + m.getY());
