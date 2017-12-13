@@ -7,6 +7,12 @@ This project has been forked and further developed from this github repository -
 
 ### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
 
+### Videos
+
+| Library Demosrtation | XR3Player using this library |
+|:-:|:-:|
+| [![First](http://img.youtube.com/vi/S_gjUgqKH38/0.jpg)](https://www.youtube.com/watch?v=S_gjUgqKH38)  | [![Second](http://img.youtube.com/vi/Id05W1iJEw8/0.jpg)](https://www.youtube.com/watch?v=Id05W1iJEw8) |
+
 ---
 
 ### Use it with Maven , Gradle etc ... with 
