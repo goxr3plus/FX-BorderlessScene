@@ -553,7 +553,7 @@ public class BorderlessController {
 	 */
 	private void setMaximized(boolean maximized) {
 		this.maximized.set(maximized);
-		setResizable(!maximized);
+		//setResizable(!maximized);
 	}
 	
 	/**
