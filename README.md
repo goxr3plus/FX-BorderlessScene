@@ -1,4 +1,15 @@
 # FX-BorderlessScene
+
+[![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
+[![GitHub contributors][contributors-image]][contributors-url]
+[![HitCount](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene.svg)](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene)
+[![Total Downloads](https://img.shields.io/github/downloads/goxr3plus/FX-BorderlessScene/total.svg)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
+
+
+[contributors-url]: https://github.com/goxr3plus/FX-BorderlessScene/graphs/contributors
+[contributors-image]: https://img.shields.io/github/contributors/goxr3plus/FX-BorderlessScene.svg
+
+
 Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.
 
 ### Information
@@ -6,8 +17,6 @@ Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, clos
 This project has been forked and further developed from this github repository -> https://github.com/NicolasSenetLarson/BorderlessScene
 
 ### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
-
-### Videos
 
 | Library Demosrtation | XR3Player using this library |
 |:-:|:-:|
