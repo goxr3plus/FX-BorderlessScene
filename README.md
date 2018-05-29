@@ -1,11 +1,32 @@
 # FX-BorderlessScene
+
+[![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
+[![GitHub contributors][contributors-image]][contributors-url]
+[![HitCount](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene.svg)](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene)
+[![Total Downloads](https://img.shields.io/github/downloads/goxr3plus/FX-BorderlessScene/total.svg)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
+
+
+[contributors-url]: https://github.com/goxr3plus/FX-BorderlessScene/graphs/contributors
+[contributors-image]: https://img.shields.io/github/contributors/goxr3plus/FX-BorderlessScene.svg
+
+
 Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.
+
+### Keep the bro alive :)
+
+<a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
+<a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
+
 
 ### Information
 
 This project has been forked and further developed from this github repository -> https://github.com/NicolasSenetLarson/BorderlessScene
 
 ### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
+
+| Library Demosrtation | XR3Player using this library |
+|:-:|:-:|
+| [![First](http://img.youtube.com/vi/S_gjUgqKH38/0.jpg)](https://www.youtube.com/watch?v=S_gjUgqKH38)  | [![Second](http://img.youtube.com/vi/Id05W1iJEw8/0.jpg)](https://www.youtube.com/watch?v=Id05W1iJEw8) |
 
 ---
 
@@ -70,7 +91,7 @@ public class Main extends Application {
 		closeButton.setOnAction(a -> primaryStage.close());
 		
 		// Constructor using your primary stage and the root Parent of your content.
-		BorderlessScene scene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, borderPane, 100, 100);
+		BorderlessScene scene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, borderPane, 250, 250);
 		primaryStage.setScene(scene); // Set the scene to your stage and you're done!
 		
 		//Close Button
@@ -107,6 +128,7 @@ public class Main extends Application {
 		//scene.getWindowedPosition();
 		
 		//Show
+		primaryStage.setTitle("Draggable and Undecorated JavaFX Window");
 		primaryStage.show();
 		
 	}
@@ -116,4 +138,5 @@ public class Main extends Application {
 	}
 	
 }
+
 ```
