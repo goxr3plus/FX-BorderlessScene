@@ -31,6 +31,7 @@ public class Main extends Application {
 		topLabel.setStyle("-fx-background-color:#303030; -fx-text-fill:white; -fx-font-weight:bold;");
 		topLabel.setAlignment(Pos.CENTER);
 		borderPane.setTop(topLabel);
+		borderPane.setStyle("-fx-border-color:#202020; -fx-border-width:2px;");
 		
 		//Close Button
 		Button closeButton = new Button("Exit");
