@@ -457,8 +457,8 @@ public class BorderlessController {
 					
 					//Check if it violates minimumWidth
 					if (comingWidth > 0 && comingWidth >= stage.getMinWidth()) {
-						stage.setWidth(comingWidth);
-						stage.setX(m.getScreenX());
+                        stage.setWidth(stage.getX() - m.getScreenX() + stage.getWidth());
+                        stage.setX(m.getScreenX());
 					}
 					
 				} else if (direction.endsWith("right")) {
@@ -466,7 +466,7 @@ public class BorderlessController {
 					
 					//Check if it violates
 					if (comingWidth > 0 && comingWidth >= stage.getMinWidth())
-						stage.setWidth(width + m.getX());
+                        stage.setWidth(m.getSceneX());
 				}
 				
 				// Vertical resize.
@@ -475,8 +475,8 @@ public class BorderlessController {
 						stage.setHeight(prevSize.y);
 						snapped = false;
 					} else if ( ( height > stage.getMinHeight() ) || ( m.getY() < 0 )) {
-						stage.setHeight(height - m.getScreenY() + stage.getY());
-						stage.setY(m.getScreenY());
+                        stage.setHeight(stage.getY() - m.getScreenY() + stage.getHeight());
+                        stage.setY(m.getScreenY());
 					}
 				} else if (direction.startsWith(bottom)) {
 					if (snapped) {
@@ -487,8 +487,7 @@ public class BorderlessController {
 						
 						//Check if it violates
 						if (comingHeight > 0 && comingHeight >= stage.getMinHeight())
-							stage.setHeight(height + m.getY());
-						
+                            stage.setHeight(m.getSceneY() );
 					}
 					
 				}
