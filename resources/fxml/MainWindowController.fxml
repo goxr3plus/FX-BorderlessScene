@@ -15,7 +15,7 @@
    <children>
       <BorderPane style="-fx-border-color: #202020; -fx-border-width: 3;">
          <bottom>
-            <Label fx:id="bottomLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Window Maximized : false" BorderPane.alignment="CENTER" />
+            <Label fx:id="bottomLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #303030; -fx-font-weight: bold; -fx-text-fill: white;" text="Window Maximized : false" BorderPane.alignment="CENTER" />
          </bottom>
          <center>
             <VBox alignment="CENTER" BorderPane.alignment="CENTER">
@@ -41,8 +41,13 @@
                         <Insets bottom="15.0" top="15.0" />
                      </VBox.margin>
                   </Separator>
-                  <Label layoutX="251.0" layoutY="90.0" style="-fx-background-color: #353535; -fx-text-fill: white; -fx-font-weight: bold;" text="----- Main Window general styling-----" />
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="27.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                  <Label layoutX="251.0" layoutY="90.0" style="-fx-background-color: #353535; -fx-text-fill: white; -fx-font-weight: bold;" text="----- Main Window general styling-----">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="220.0" style="-fx-background-color: firebrick; -fx-text-fill: white; -fx-font-weight: bold;" text="This feature is not yet implemeted , i will soon :)" />
+                  <HBox alignment="CENTER" disable="true" layoutX="10.0" layoutY="27.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <Button fx:id="mainWStyle1" mnemonicParsing="false" text="Apply Style 1">
                            <cursor>
