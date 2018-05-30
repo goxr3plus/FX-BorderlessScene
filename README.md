@@ -57,7 +57,7 @@ https://jitpack.io/#goxr3plus/FX-BorderlessScene
   <dependency>
     <groupId>com.github.goxr3plus</groupId>
     <artifactId>FX-BorderlessScene</artifactId>
-    <version>V2.5.0</version>
+    <version>V3.0.0</version>
   </dependency>
   ```
 
