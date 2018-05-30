@@ -58,13 +58,13 @@ https://jitpack.io/#goxr3plus/FX-BorderlessScene
   </dependency>
   ```
 
-### Advanced example (styling AeroSnap Window , spying window maximize status etc ) with ready code for you to run 
+### > Advanced example (styling AeroSnap Window , spying window maximize status etc ) with ready code for you to run 
 
 Main Window -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/master/src/main/java/com/goxr3plus/fxborderlessscene/application/Main.java)
 
 Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/master/src/main/java/com/goxr3plus/fxborderlessscene/application/MainWindowController.java)
 
-### Simple example
+### > Simple example
 
 ``` JAVA
 import javafx.application.Application;
