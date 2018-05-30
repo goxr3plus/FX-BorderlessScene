@@ -10,7 +10,20 @@
 [contributors-image]: https://img.shields.io/github/contributors/goxr3plus/FX-BorderlessScene.svg
 
 
-Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.
+Undecorated JavaFX Scene with :
+
+**1)** implemented move
+
+**2)** resize, minimise, maximise, close
+
+**3)** Windows Aero Snap controls.
+
+**4)** Styling Aero Snap window
+
+**5)** Styling Main window
+
+This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
+
 
 ### Donate if you love me 
 
@@ -20,7 +33,6 @@ Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, clos
 
 ### Information
 
-This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
 ### [XR3Player](https://github.com/goxr3plus/XR3Player) is using this Library 
 | Library Demosrtation | XR3Player using this library |
