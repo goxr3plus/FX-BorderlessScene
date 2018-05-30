@@ -5,7 +5,7 @@
 
 	<groupId>com.github.goxr3plus</groupId>
 	<artifactId>FX-BorderlessScene</artifactId>
-	<version>2.5.0</version>
+	<version>3.0.0</version>
 	<name>FX-BorderlessScene</name>
 	<description>Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.</description>
 	<url>https://github.com/goxr3plus/FX-BorderlessScene</url>

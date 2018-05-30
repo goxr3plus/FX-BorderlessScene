@@ -146,6 +146,13 @@ public class BorderlessScene extends Scene {
 		return controller.maximizedProperty();
 	}
 	
+	/** True if the stage is maximized or false if not
+	 * @return  True if the stage is maximized or false if not
+	 */
+	public boolean isMaximized() {
+		return controller.maximizedProperty().get();
+	}
+	
 	/**
 	 * Returns the width and height of the application when windowed.
 	 * 
@@ -180,4 +187,14 @@ public class BorderlessScene extends Scene {
 		this.root.getStylesheets().remove(0);
 		
 	}
+	
+	/** The transparent window which allows the library to have aerosnap controls can be styled using this method .
+	 * It is nothing more than a StackPane in a transparent window , so for example you can change it's background color , borders , everything through this method :)
+	 * @param style The style of the transparent window of the application
+	 */
+	public void setTransparentWindowStyle(String style) {
+		controller.getTransparentWindow().setStyle("");
+		controller.getTransparentWindow().setStyle(style);
+	}
+	
 }

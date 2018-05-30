@@ -14,6 +14,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import main.java.com.goxr3plus.fxborderlessscene.window.TransparentWindow;
 
+
 /**
  * Controller implements window controls: maximize, minimize, drag, and Aero Snap.
  * 
@@ -571,4 +572,12 @@ public class BorderlessController {
 		bottomLeftPane.setDisable(!bool);
 		bottomRightPane.setDisable(!bool);
 	}
+
+	/**
+	 * @return the transparentWindow
+	 */
+	public TransparentWindow getTransparentWindow() {
+		return transparentWindow;
+	}
+
 }
