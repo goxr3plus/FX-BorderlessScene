@@ -373,6 +373,10 @@ public class BorderlessController {
 		
 		// Aero Snap on release.
 		node.setOnMouseReleased(m -> {
+			
+			try {
+				
+			
 			if ( ( m.getButton().equals(MouseButton.PRIMARY) ) && ( m.getScreenX() != eventSource.x )) {
 				Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
 				
@@ -432,7 +436,11 @@ public class BorderlessController {
 				
 			}
 			
-			//Hide the transparent window
+			}catch(Exception ex) {
+				ex.printStackTrace();
+			}
+			
+			//Hide the transparent window -- close this window no matter what
 			transparentWindow.close();
 		});
 	}
