@@ -12,7 +12,7 @@
 
 Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.
 
-### Keep the bro alive :)
+### Donate if you love me 
 
 <a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
 <a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
@@ -20,10 +20,9 @@ Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, clos
 
 ### Information
 
-This project has been forked and further developed from this github repository -> https://github.com/NicolasSenetLarson/BorderlessScene
+This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
-### XR3Player is using this Library :) -> https://github.com/goxr3plus/XR3Player
-
+### [XR3Player](https://github.com/goxr3plus/XR3Player) is using this Library 
 | Library Demosrtation | XR3Player using this library |
 |:-:|:-:|
 | [![First](http://img.youtube.com/vi/S_gjUgqKH38/0.jpg)](https://www.youtube.com/watch?v=S_gjUgqKH38)  | [![Second](http://img.youtube.com/vi/Id05W1iJEw8/0.jpg)](https://www.youtube.com/watch?v=Id05W1iJEw8) |
