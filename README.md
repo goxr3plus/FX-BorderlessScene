@@ -24,6 +24,9 @@ Undecorated JavaFX Scene with :
 
 This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
+> Awesome examples
+
+![example new window](https://user-images.githubusercontent.com/20374208/40732845-ec8970ac-643c-11e8-9411-328539195d34.png)
 
 ### Donate if you love me 
 
