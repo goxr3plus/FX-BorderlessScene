@@ -367,7 +367,7 @@ public class BorderlessController {
 		
 		// Maximize on double click.
 		node.setOnMouseClicked(m -> {
-			if ( ( m.getButton().equals(MouseButton.PRIMARY) ) && ( m.getClickCount() == 2 ))
+			if ( ( MouseButton.PRIMARY.equals(m.getButton()) ) && ( m.getClickCount() == 2 ))
 				maximize();
 		});
 		
@@ -377,7 +377,7 @@ public class BorderlessController {
 			try {
 				
 			
-			if ( ( m.getButton().equals(MouseButton.PRIMARY) ) && ( m.getScreenX() != eventSource.x )) {
+			if ( ( MouseButton.PRIMARY.equals(m.getButton()) ) && ( m.getScreenX() != eventSource.x )) {
 				Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
 				
 				// Aero Snap Left.
@@ -455,6 +455,14 @@ public class BorderlessController {
 	 */
 	private void setResizeControl(Pane pane , final String direction) {
 		
+		//Record the previous size and previous point
+		pane.setOnDragDetected((event) -> {
+			prevSize.x = stage.getWidth();
+			prevSize.y = stage.getHeight();
+			prevPos.x = stage.getX();
+			prevPos.y = stage.getY();
+		});
+		
 		pane.setOnMouseDragged(m -> {
 			if (m.isPrimaryButtonDown()) {
 				double width = stage.getWidth();
@@ -514,7 +522,7 @@ public class BorderlessController {
 		
 		// Aero Snap Resize.
 		pane.setOnMouseReleased(m -> {
-			if ( ( m.getButton().equals(MouseButton.PRIMARY) ) && ( !snapped )) {
+			if ( ( MouseButton.PRIMARY.equals(m.getButton()) ) && ( !snapped )) {
 				Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
 				
 				if ( ( stage.getY() <= screen.getMinY() ) && ( direction.startsWith("top") )) {
@@ -534,7 +542,7 @@ public class BorderlessController {
 		
 		// Aero Snap resize on double click.
 		pane.setOnMouseClicked(m -> {
-			if ( ( m.getButton().equals(MouseButton.PRIMARY) ) && ( m.getClickCount() == 2 ) && ( "top".equals(direction) || bottom.equals(direction) )) {
+			if ( ( MouseButton.PRIMARY.equals(m.getButton()) ) && ( m.getClickCount() == 2 ) && ( "top".equals(direction) || bottom.equals(direction) )) {
 				Rectangle2D screen = Screen.getScreensForRectangle(stage.getX(), stage.getY(), stage.getWidth() / 2, stage.getHeight() / 2).get(0).getVisualBounds();
 				
 				if (snapped) {
