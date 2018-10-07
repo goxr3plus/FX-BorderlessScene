@@ -296,7 +296,7 @@ public class BorderlessController{
 
 				// System.out.println("StartX: " + startX + " StartY: " + startY);
 				// System.out.println("MouseX: " + mouseX + " MouseY: " + mouseY);
-				// System.out.println(leftRightCenter + " " + topBottomCenter + " " + isCorner);
+				// System.out.println(leftRightCenter + " " + topBottomCenter + " " + isCorner);/
 				isAeroSnap = true;
 				if(Direction.RIGHT.equals(leftRightCenter) && Direction.TOP.equals(topBottomCenter)){
 					// System.out.println("RIGHT TOP");
