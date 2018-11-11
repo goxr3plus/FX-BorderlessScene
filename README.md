@@ -34,10 +34,9 @@ This project has been forked and further developed from [this](https://github.co
 <a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
 
 ### [XR3Player](https://github.com/goxr3plus/XR3Player) is using this Library 
-| Library Demosrtation | XR3Player using this library |
-|:-:|:-:|
-| [![First](http://img.youtube.com/vi/S_gjUgqKH38/0.jpg)](https://www.youtube.com/watch?v=S_gjUgqKH38)  | [![Second](http://img.youtube.com/vi/Id05W1iJEw8/0.jpg)](https://www.youtube.com/watch?v=Id05W1iJEw8) |
-
+| Video|
+|:-:|
+| [![First](https://user-images.githubusercontent.com/20374208/48313813-34fdc180-e5ca-11e8-9da7-c6148dc0cbe5.png)](https://www.youtube.com/watch?v=7Hai7cavmUY)  |
 ---
 
 ### Use it with Maven , Gradle etc ... with 
