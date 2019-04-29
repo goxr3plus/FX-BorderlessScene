@@ -42,6 +42,13 @@ public class BorderlessScene extends Scene {
 	/** The stage. */
 	private Stage stage;
 	
+	public static BorderlessScene forUtility(Stage stage, Parent sceneRoot) {
+		BorderlessScene scene = new BorderlessScene(stage, StageStyle.UNDECORATED, sceneRoot);
+		scene.setSnapEnabled(false);
+		scene.setResizable(false);
+		return scene;
+	}
+	
 	/**
 	 * The constructor.
 	 * 
@@ -51,13 +58,9 @@ public class BorderlessScene extends Scene {
 	 *            <b>Undecorated</b> and <b>Transparent</b> StageStyles are accepted or else the Transparent StageStyle will be set.
 	 * @param sceneRoot
 	 *            The root of the Scene
-	 * @param minWidth
-	 *            The minimum width that the Stage can have
-	 * @param minHeight
-	 *            The minimum height that the Stage can have
 	 * 
 	 */
-	public BorderlessScene(Stage stage, StageStyle stageStyle, Parent sceneRoot, double minWidth, double minHeight) {
+	public BorderlessScene(Stage stage, StageStyle stageStyle, Parent sceneRoot) {
 		super(new Pane());
 		try {
 			
@@ -77,15 +80,33 @@ public class BorderlessScene extends Scene {
 			
 			// StageStyle
 			stage.initStyle(stageStyle);
-			this.stage = stage;
-			
-			// minSize
-			stage.setMinWidth(minWidth);
-			stage.setMinHeight(minHeight);
-			
+			this.stage = stage;			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}		
+	}
+	
+	/**
+	 * The constructor.
+	 * 
+	 * @param stage
+	 *            your stage.
+	 * @param stageStyle
+	 *            <b>Undecorated</b> and <b>Transparent</b> StageStyles are accepted or else the Transparent StageStyle will be set.
+	 * @param sceneRoot
+	 *            The root of the Scene
+	 * @param minWidth
+	 *            The minimum width that the Stage can have
+	 * @param minHeight
+	 *            The minimum height that the Stage can have
+	 * 
+	 */
+	public BorderlessScene(Stage stage, StageStyle stageStyle, Parent sceneRoot, double minWidth, double minHeight) {
+		this(stage, stageStyle, sceneRoot);
+		
+		// minSize
+		stage.setMinWidth(minWidth);
+		stage.setMinHeight(minHeight);
 	}
 	
 	/**
@@ -133,17 +154,45 @@ public class BorderlessScene extends Scene {
 	 * @param bool
 	 *            false to disable, true to enable.
 	 */
-	public void setResizable(Boolean bool) {
+	public void setResizable(boolean bool) {
 		controller.setResizable(bool);
 	}
 	
 	/**
-	 * Check the maximized state of the application.
+	 * Disable/enable the Aero Snap of your stage. Enabled by default.
 	 * 
-	 * @return true if the window is maximized.
+	 * @param bool
+	 *            false to disable, true to enable.
+	 */
+	public void setSnapEnabled(boolean bool) {
+		controller.setSnapEnabled(bool);
+	}
+	
+	/**
+	 * Maximized property.
+	 *
+	 * @return Maximized property
 	 */
 	public ReadOnlyBooleanProperty maximizedProperty() {
 		return controller.maximizedProperty();
+	}
+	
+	/**
+	 * Resizable property.
+	 *
+	 * @return Resizable property
+	 */
+	public ReadOnlyBooleanProperty resizableProperty() {
+		return controller.resizableProperty();
+	}
+	
+	/**
+	 * Aero Snap property.
+	 *
+	 * @return Aero Snap property
+	 */
+	public ReadOnlyBooleanProperty snapProperty() {
+		return controller.snapProperty();
 	}
 	
 	/** True if the stage is maximized or false if not
@@ -151,6 +200,20 @@ public class BorderlessScene extends Scene {
 	 */
 	public boolean isMaximized() {
 		return controller.maximizedProperty().get();
+	}
+	
+	/** True if the stage is resizable or false if not
+	 * @return  True if the stage is resizable or false if not
+	 */
+	public boolean isResizable() {
+		return controller.resizableProperty().get();
+	}
+	
+	/** True if Aero Snap is enabled or false if not
+	 * @return  True if Aero Snap is enabled or false if not
+	 */
+	public boolean isSnapEnabled() {
+		return controller.snapProperty().get();
 	}
 	
 	/**

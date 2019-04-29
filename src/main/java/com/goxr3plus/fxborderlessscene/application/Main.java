@@ -20,7 +20,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		
 		//Primary Stage
-		this.primaryStage = primaryStage;
+		Main.primaryStage = primaryStage;
 		
 		// Set the scene to your stage and you're done!
 		BorderlessScene borderlessScene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, mainWindowController, 250, 250);
