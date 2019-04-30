@@ -37,17 +37,10 @@ public class BorderlessScene extends Scene {
 	private BorderlessController controller;
 
 	/** The root. */
-	private AnchorPane root;
+	private BorderlessPane root;
 
-	/** The stage. */
+	/** The Stage. */
 	private Stage stage;
-
-	public static BorderlessScene forUtility(Stage stage, Parent sceneRoot) {
-		BorderlessScene scene = new BorderlessScene(stage, StageStyle.UNDECORATED, sceneRoot);
-		scene.setSnapEnabled(false);
-		scene.setResizable(false);
-		return scene;
-	}
 
 	/**
 	 * The constructor.
@@ -59,23 +52,26 @@ public class BorderlessScene extends Scene {
 	public BorderlessScene(Stage stage, StageStyle stageStyle, Parent sceneRoot) {
 		super(new Pane());
 		try {
-
 			// Load the FXML
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("/fxml/Borderless.fxml"));
-			this.root = loader.load();
+			this.root = new BorderlessPane();
 
 			// Set Scene root
 			setRoot(this.root);
 			setContent(sceneRoot);
 
 			// Initialize the Controller
-			this.controller = loader.getController();
+			this.controller = new BorderlessController();
 			this.controller.setStage(stage);
 			this.controller.createTransparentWindow(stage);
 
 			// StageStyle
 			stage.initStyle(stageStyle);
+			if (stageStyle == StageStyle.UTILITY) {
+				setSnapEnabled(false);
+				setResizable(false);
+			}
+
+			// Stage
 			this.stage = stage;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -107,10 +103,10 @@ public class BorderlessScene extends Scene {
 	public void setContent(Parent content) {
 		this.root.getChildren().remove(0);
 		this.root.getChildren().add(0, content);
-		AnchorPane.setLeftAnchor(content, Double.valueOf(0.0D));
-		AnchorPane.setTopAnchor(content, Double.valueOf(0.0D));
-		AnchorPane.setRightAnchor(content, Double.valueOf(0.0D));
-		AnchorPane.setBottomAnchor(content, Double.valueOf(0.0D));
+		AnchorPane.setLeftAnchor(content, 0.0D);
+		AnchorPane.setTopAnchor(content, 0.0D);
+		AnchorPane.setRightAnchor(content, 0.0D);
+		AnchorPane.setBottomAnchor(content, 0.0D);
 	}
 
 	/**
