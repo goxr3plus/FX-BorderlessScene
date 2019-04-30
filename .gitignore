@@ -26,3 +26,11 @@ hs_err_pid*
 
 *.iml
 *.DS_Store
+
+*.classpath
+*.project
+*.settings
+*.settings/*
+*.idea
+*.idea/*
+spartanizer.xml

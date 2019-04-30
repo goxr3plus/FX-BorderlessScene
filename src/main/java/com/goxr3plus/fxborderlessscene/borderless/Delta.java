@@ -1,7 +1,7 @@
 /*
  * 
  */
-package main.java.com.goxr3plus.fxborderlessscene.borderless;
+package com.goxr3plus.fxborderlessscene.borderless;
 
 /**
  * This class represents a point with x and y values.

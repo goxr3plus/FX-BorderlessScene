@@ -1,7 +1,7 @@
 /**
  * OOUUUUUUUUU PARTYYYYYYYYYYYYYYYYYYYYY!
  */
-package main.java.com.goxr3plus.fxborderlessscene.window;
+package com.goxr3plus.fxborderlessscene.window;
 
 import java.io.IOException;
 import java.util.logging.Level;
