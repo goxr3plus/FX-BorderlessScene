@@ -24,25 +24,15 @@ Undecorated JavaFX Scene with :
 
 This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
-> Awesome examples
 
-![example new window](https://user-images.githubusercontent.com/20374208/40732845-ec8970ac-643c-11e8-9411-328539195d34.png)
+![java_2019-04-30_17-43-54](https://user-images.githubusercontent.com/20374208/56970311-8b0df380-6b6f-11e9-83f1-65a5e4a03b8a.png)
 
-### Donate if you love me 
-
-<a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
-<a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
-
-### [XR3Player](https://github.com/goxr3plus/XR3Player) is using this Library 
-| Video|
-|:-:|
-| [![First](https://user-images.githubusercontent.com/20374208/48313813-34fdc180-e5ca-11e8-9da7-c6148dc0cbe5.png)](https://www.youtube.com/watch?v=7Hai7cavmUY)  |
----
 
 ### Use it with Maven , Gradle etc ... with 
 
 https://jitpack.io/#goxr3plus/FX-BorderlessScene
 
+Add JitPack on your repositories :
 ``` XML
 <repositories>
    <repository>
@@ -51,14 +41,16 @@ https://jitpack.io/#goxr3plus/FX-BorderlessScene
    </repository>
 </repositories>
 ```
+
+Add the dependency : 
   
-  ``` XML
-  <dependency>
-    <groupId>com.github.goxr3plus</groupId>
-    <artifactId>FX-BorderlessScene</artifactId>
-    <version>V3.1.0</version>
-  </dependency>
-  ```
+``` XML
+<dependency>
+  <groupId>com.github.goxr3plus</groupId>
+  <artifactId>FX-BorderlessScene</artifactId>
+  <version>V3.1.0</version>
+</dependency>
+```
 
 ### > Advanced example (styling AeroSnap Window , spying window maximize status etc ) with ready code for you to run 
 
@@ -155,3 +147,15 @@ public class Main extends Application {
 }
 
 ```
+
+### [XR3Player](https://github.com/goxr3plus/XR3Player) is using this Library 
+| Video|
+|:-:|
+| [![First](https://user-images.githubusercontent.com/20374208/48313813-34fdc180-e5ca-11e8-9da7-c6148dc0cbe5.png)](https://www.youtube.com/watch?v=7Hai7cavmUY)  |
+---
+
+
+### Donate if you love me 
+
+<a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
+<a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
