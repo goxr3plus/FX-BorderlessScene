@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="464.0" prefWidth="754.0" stylesheets="@../css/extra.css" type="StackPane" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane style="-fx-border-color: #202020; -fx-border-width: 3;" styleClass="applicationSettingsLabel2">
+         <bottom>
+            <Label fx:id="bottomLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="online-music-title-label" text="Window Maximized : false" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="white-black-label" text="-----Transparent Aero Snap Background Window-----" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="transWStyle1" mnemonicParsing="false" styleClass="jfx-button-green" text="Apply Style 1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="transWStyle2" mnemonicParsing="false" styleClass="jfx-button-green" text="Apply Style 2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label style="-fx-font-weight: bold;" text="So to check the background transparent window , move the window to the corners of your computer screen" textAlignment="CENTER" wrapText="true" />
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label layoutX="275.0" layoutY="220.0" style="-fx-background-color: firebrick; -fx-text-fill: white; -fx-font-weight: bold;" text="This feature is not yet implemeted , help me do it :)" />
+                  <Label layoutX="251.0" layoutY="90.0" styleClass="white-black-label" text="----- Main Window general styling-----">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" disable="true" layoutX="10.0" layoutY="27.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="mainWStyle1" mnemonicParsing="false" styleClass="jfx-button-green" text="Apply Style 1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="mainWStyle2" mnemonicParsing="false" styleClass="jfx-button-green" text="Apply Style 2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="mainWRemoveStyle" layoutX="401.0" layoutY="48.0" mnemonicParsing="false" styleClass="jfx-button-green" text="Remove styling">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label style="-fx-font-weight: bold;" text="Try to resize this window , you will see the style has changed " textAlignment="CENTER" wrapText="true" />
+                  <Separator layoutX="10.0" layoutY="211.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox alignment="CENTER" spacing="2.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="topLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-cursor: move;" styleClass="online-music-title-label" text="Drag here to move the window" HBox.hgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="MOVE" />
+                     </cursor>
+                  </Label>
+                  <RadioButton fx:id="aeroSnap" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" styleClass="jfx-button-green" text="Aero Snap" />
+                  <Button fx:id="minimize" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="39.0" style="-fx-background-radius: 0;" styleClass="jfx-button-green" text="-">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="maximizeNormalize" layoutX="663.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="39.0" style="-fx-background-radius: 0;" styleClass="jfx-button-yellow" text="+">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="exit" layoutX="702.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" style="-fx-background-radius: 0;" styleClass="jfx-button-red" text="Exit">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</fx:root>

@@ -18,7 +18,7 @@ public class Main extends Application {
 	static Stage primaryStage;
 	
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) {
 		
 		//Primary Stage
 		Main.primaryStage = primaryStage;
