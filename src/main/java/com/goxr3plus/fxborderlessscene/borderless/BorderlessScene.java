@@ -6,7 +6,6 @@ package com.goxr3plus.fxborderlessscene.borderless;
 import java.io.IOException;
 
 import javafx.beans.property.BooleanProperty;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -235,7 +234,7 @@ public class BorderlessScene extends Scene {
 	 */
 	public void removeDefaultCSS() {
 
-		this.root.getStylesheets().remove(0);
+		((Parent) this.root.getChildren().get(0)).getStylesheets().remove(0);
 
 	}
 
