@@ -48,7 +48,7 @@ Add the dependency :
 <dependency>
   <groupId>com.github.goxr3plus</groupId>
   <artifactId>FX-BorderlessScene</artifactId>
-  <version>V3.1.0</version>
+  <version>4.0.0</version>
 </dependency>
 ```
 
@@ -69,7 +69,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.java.com.goxr3plus.fxborderlessscene.borderless.BorderlessScene;
+import com.goxr3plus.fxborderlessscene.borderless.BorderlessScene;
 
 /**
  * Testing the application to see if it works
