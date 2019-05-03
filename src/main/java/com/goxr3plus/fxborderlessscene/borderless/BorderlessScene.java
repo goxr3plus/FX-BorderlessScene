@@ -233,9 +233,7 @@ public class BorderlessScene extends Scene {
 	 * Removes the default css style of the corners
 	 */
 	public void removeDefaultCSS() {
-
-		((Parent) this.root.getChildren().get(0)).getStylesheets().remove(0);
-
+		this.root.getStylesheets().remove(0);
 	}
 
 	/**
