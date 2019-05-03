@@ -48,7 +48,7 @@ Add the dependency :
 <dependency>
   <groupId>com.github.goxr3plus</groupId>
   <artifactId>FX-BorderlessScene</artifactId>
-  <version>4.1.0</version>
+  <version>4.2.0</version>
 </dependency>
 ```
 
