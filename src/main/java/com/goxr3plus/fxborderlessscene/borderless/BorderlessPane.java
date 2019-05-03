@@ -5,7 +5,6 @@ package com.goxr3plus.fxborderlessscene.borderless;
 
 import java.io.IOException;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -26,26 +25,13 @@ import javafx.scene.layout.AnchorPane;
  * @version 1.0
  */
 public class BorderlessPane extends AnchorPane {
-
-
-
-	public BorderlessPane () throws IOException {
+	public BorderlessPane (BorderlessController controller) throws IOException {
 
 		// ------------------------------------FXMLLOADER ----------------------------------------
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Borderless.fxml"));
-		loader.setController(this);
+		loader.setController(controller);
 		loader.setRoot(this);
         loader.load();
-
-	}
-
-
-	/**
-	 * Called as soon as .fxml is initialised
-	 */
-	@FXML
-	private void initialize() {
-
 	}
 }

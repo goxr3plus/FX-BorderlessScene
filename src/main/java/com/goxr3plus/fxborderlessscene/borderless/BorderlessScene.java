@@ -51,15 +51,15 @@ public class BorderlessScene extends Scene {
 	public BorderlessScene(Stage stage, StageStyle stageStyle, Parent sceneRoot) {
 		super(new Pane());
 		try {
+			this.controller = new BorderlessController();
 			// Load the FXML
-			this.root = new BorderlessPane();
+			this.root = new BorderlessPane(this.controller);
 
 			// Set Scene root
 			setRoot(this.root);
 			setContent(sceneRoot);
 
 			// Initialize the Controller
-			this.controller = new BorderlessController();
 			this.controller.setStage(stage);
 			this.controller.createTransparentWindow(stage);
 
@@ -233,9 +233,7 @@ public class BorderlessScene extends Scene {
 	 * Removes the default css style of the corners
 	 */
 	public void removeDefaultCSS() {
-
-		((Parent) this.root.getChildren().get(0)).getStylesheets().remove(0);
-
+		this.root.getStylesheets().remove(0);
 	}
 
 	/**
