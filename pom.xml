@@ -5,7 +5,7 @@
 
 	<groupId>com.github.goxr3plus</groupId>
 	<artifactId>FX-BorderlessScene</artifactId>
-	<version>4.3.0</version>
+	<version>4.3.1</version>
 	<name>FX-BorderlessScene</name>
 	<description>Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.</description>
 	<url>https://github.com/goxr3plus/FX-BorderlessScene</url>
@@ -107,4 +107,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+	        <version>5.3.1</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>net.java.dev.jna</groupId>
+	        <artifactId>jna-platform</artifactId>
+	        <version>5.3.1</version>
+	    </dependency>
+	</dependencies>
 </project>
