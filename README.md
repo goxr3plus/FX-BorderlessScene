@@ -10,6 +10,11 @@
 [contributors-image]: https://img.shields.io/github/contributors/goxr3plus/FX-BorderlessScene.svg
 
 
+
+![java_2019-04-30_17-43-54](https://user-images.githubusercontent.com/20374208/56970311-8b0df380-6b6f-11e9-83f1-65a5e4a03b8a.png)
+
+
+
 Undecorated JavaFX Scene with :
 
 **1)** implemented move
@@ -23,10 +28,6 @@ Undecorated JavaFX Scene with :
 **5)** Styling Main window
 
 This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
-
-
-![java_2019-04-30_17-43-54](https://user-images.githubusercontent.com/20374208/56970311-8b0df380-6b6f-11e9-83f1-65a5e4a03b8a.png)
-
 
 ### Use it with Maven , Gradle etc ... with 
 
