@@ -1,6 +1,8 @@
 # FX-BorderlessScene
+💠 Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls.
 
-You don't like native operating system window styling ? No problem , this library is here to fix it .
+**You don't like native operating system window styling ?**
+
 Implement any style you want for your JavaFX application ( using custom css or default) .
 
 [![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
