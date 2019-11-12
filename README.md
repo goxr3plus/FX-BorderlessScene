@@ -20,14 +20,14 @@
 
 ## Features
 - **Done ✔️**
- - Implemented drag and move
- - resize, minimise, maximise, close
- - Windows Aero Snap controls.
- - Styling Aero Snap window
- - Styling Main window
+  - Implemented drag and move
+  - resize, minimise, maximise, close
+  - Windows Aero Snap controls.
+  - Styling Aero Snap window
+  - Styling Main window
 - **TODO 🚧**
- - Multiple Screens Support
- - Fix lagging on resizing
+  - Multiple Screens Support
+  - Fix lagging on resizing
 
 This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
