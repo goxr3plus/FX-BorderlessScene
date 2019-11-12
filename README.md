@@ -1,5 +1,8 @@
 # FX-BorderlessScene
 
+You don't like native operating system window styling ? No problem , this library is here to fix it .
+Implement any style you want for your JavaFX application ( using custom css or default) .
+
 [![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
 [![GitHub contributors][contributors-image]][contributors-url]
 [![HitCount](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene.svg)](http://hits.dwyl.io/goxr3plus/FX-BorderlessScene)
