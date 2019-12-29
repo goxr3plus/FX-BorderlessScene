@@ -4,7 +4,7 @@
 <p align="center">
 💠 
 </p>
-<p align="center">
+<p align="center"> 
 <sup>
 <b> Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls. </b>
 <b> Implement any style you want for your JavaFX application using custom css or default . <b>
