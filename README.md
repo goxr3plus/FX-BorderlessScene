@@ -11,7 +11,7 @@
 </sup>
 </p>
 
----
+--- 
 
 [![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
 [![GitHub contributors][contributors-image]][contributors-url]
