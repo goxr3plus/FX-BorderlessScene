@@ -74,7 +74,7 @@ Main Window -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/maste
 
 Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/master/src/main/java/com/goxr3plus/fxborderlessscene/application/MainWindowController.java)
 
-### > Simple example
+###  Simple example
 
 ``` JAVA
 import javafx.application.Application;
