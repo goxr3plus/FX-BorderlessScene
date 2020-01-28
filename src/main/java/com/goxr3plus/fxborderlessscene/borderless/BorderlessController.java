@@ -6,6 +6,7 @@ package com.goxr3plus.fxborderlessscene.borderless;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
@@ -289,7 +290,11 @@ public class BorderlessController {
 				} else {
 					//--------------------------Check here for Transparent Window--------------------------
 					//Rectangle2D wholeScreen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getBounds()
-					Rectangle2D screen = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1).get(0).getVisualBounds();
+					ObservableList<Screen> screens = Screen.getScreensForRectangle(m.getScreenX(), m.getScreenY(), 1, 1);
+					if (screens.isEmpty()) {
+						return;
+					}
+					Rectangle2D screen = screens.get(0).getVisualBounds();
 
 					//----------TO BE ADDED IN FUTURE RELEASE , GAVE ME CANCER implementing them ..----------------
 
