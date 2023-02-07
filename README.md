@@ -1,4 +1,19 @@
-# FX-BorderlessScene
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q3WBIC)
+
+---
+
+<h3 align="center" > FX-BorderlessScene ( Library )</h3>
+<p align="center"> 
+💠 
+</p>
+<p align="center"> 
+<sup>
+<b> Undecorated JavaFX Scene with implemented move, resize, minimise, maximise, close and Windows Aero Snap controls. </b>
+<b> Implement any style you want for your JavaFX application using custom css or default . <b>
+</sup>
+</p>
+
+--- 
 
 [![Latest Version](https://img.shields.io/github/release/goxr3plus/FX-BorderlessScene.svg?style=flat-square)](https://github.com/goxr3plus/FX-BorderlessScene/releases)
 [![GitHub contributors][contributors-image]][contributors-url]
@@ -10,23 +25,26 @@
 [contributors-image]: https://img.shields.io/github/contributors/goxr3plus/FX-BorderlessScene.svg
 
 
-Undecorated JavaFX Scene with :
-
-**1)** implemented move
-
-**2)** resize, minimise, maximise, close
-
-**3)** Windows Aero Snap controls.
-
-**4)** Styling Aero Snap window
-
-**5)** Styling Main window
-
-This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
-
 
 ![java_2019-04-30_17-43-54](https://user-images.githubusercontent.com/20374208/56970311-8b0df380-6b6f-11e9-83f1-65a5e4a03b8a.png)
 
+### Donate if you love me  
+
+<a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
+<a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
+
+## Features
+- **Done ✔️**
+  - Implemented drag and move
+  - resize, minimise, maximise, close
+  - Windows Aero Snap controls.
+  - Styling Aero Snap window
+  - Styling Main window
+- **TODO 🚧**
+  - Multiple Screens Support
+  - Fix lagging on resizing
+
+This project has been forked and further developed from [this](https://github.com/NicolasSenetLarson/BorderlessScene) github repository
 
 ### Use it with Maven , Gradle etc ... with 
 
@@ -48,7 +66,7 @@ Add the dependency :
 <dependency>
   <groupId>com.github.goxr3plus</groupId>
   <artifactId>FX-BorderlessScene</artifactId>
-  <version>4.2.0</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
@@ -58,7 +76,7 @@ Main Window -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/maste
 
 Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene/blob/master/src/main/java/com/goxr3plus/fxborderlessscene/application/MainWindowController.java)
 
-### > Simple example
+###  Simple example
 
 ``` JAVA
 import javafx.application.Application;
@@ -153,9 +171,3 @@ public class Main extends Application {
 |:-:|
 | [![First](https://user-images.githubusercontent.com/20374208/48313813-34fdc180-e5ca-11e8-9da7-c6148dc0cbe5.png)](https://www.youtube.com/watch?v=7Hai7cavmUY)  |
 ---
-
-
-### Donate if you love me 
-
-<a href="https://patreon.com/preview/8adae1b75d654b2899e04a9e1111f0eb" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
-<a href="https://www.paypal.me/GOXR3PLUSCOMPANY" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
