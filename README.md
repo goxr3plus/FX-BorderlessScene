@@ -87,7 +87,7 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 -Deleted the Region node in the Border Pane, it seems that no use was found.
 - The test file is moved to the test folder
 
-### Modification content(中文)
+### 本分叉修改的主要内容
 <span id="modification-content-zh" ></span>
 - 适配java11+,javafx13+ (javafx11点击图标无法最小化)
 - 版本号修改为11.0.0, 表示最小jdk11
