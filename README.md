@@ -80,7 +80,7 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 
 ### Modification content
 <span id="modification-content" ></span>
-- Adapt to java 11+, javafx 13+
+- Adapt to java 11+, javafx 13+ (javafx 11 click icon can not be minimized)
 - The version number is changed to 11.0.0, indicating the minimum jdk11
 - Delete the dependency of the fxml module, and use java code replace the FXML file.
 - Deleted jna, jna-platform dependencies; fx13+ solves the bug that transparent/undecorated stage cannot be minimized by clicking the icon.
@@ -89,7 +89,7 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 
 ### Modification content(中文)
 <span id="modification-content-zh" ></span>
-- 适配java11+,javafx13+
+- 适配java11+,javafx13+ (javafx11点击图标无法最小化)
 - 版本号修改为11.0.0, 表示最小jdk11
 - 删除fxml模块的依赖,把FXML文件修改成java代码.
 - 删除了jna,jna-platform 依赖; fx13+解决了透明窗口和无边框窗口点击图标无法最小化的bug.
