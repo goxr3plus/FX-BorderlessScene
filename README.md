@@ -84,7 +84,7 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 - The version number is changed to 11.0.0, indicating the minimum jdk11
 - Delete the dependency of the fxml module, and use java code replace the FXML file.
 - Deleted jna, jna-platform dependencies; fx13+ solves the bug that transparent/undecorated stage cannot be minimized by clicking the icon.
-- Deleted the Region node in the Border Pane, it seems that no use was found.
+- Deleted the Region node in the BorderlessPane, it seems that no use was found.
 - The test file is moved to the test folder
 
 ### 本分叉修改的主要内容
@@ -93,7 +93,7 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 - 版本号修改为11.0.0, 表示最小jdk11
 - 删除fxml模块的依赖,把FXML文件修改成java代码.
 - 删除了jna,jna-platform 依赖; fx13+解决了透明窗口和无边框窗口点击图标无法最小化的bug.
-- 删除了BorderPane里的Region节点,似乎没有查找到用途.
+- 删除了BorderlessPane里的Region节点,似乎没有查找到用途.
 - 测试类移动到了test文件夹下.
 
 
