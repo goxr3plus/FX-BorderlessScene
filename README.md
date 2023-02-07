@@ -86,6 +86,8 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 - Deleted jna, jna-platform dependencies; fx13+ solves the bug that transparent/undecorated stage cannot be minimized by clicking the icon.
 - Deleted the Region node in the BorderlessPane, it seems that no use was found.
 - The test file is moved to the test folder
+- Try to modify the project into a modular project;
+- application.css Change the name to borderless-scene.css
 
 ### 本分叉修改的主要内容
 <span id="modification-content-zh" ></span>
@@ -95,6 +97,8 @@ Main Window Controller -> [here](https://github.com/goxr3plus/FX-BorderlessScene
 - 删除了jna,jna-platform 依赖; fx13+解决了透明窗口和无边框窗口点击图标无法最小化的bug.
 - 删除了BorderlessPane里的Region节点,似乎没有查找到用途.
 - 测试类移动到了test文件夹下.
+- 尝试将项目修改为模块化项目.
+- application.css 改名为borderless-scene.css
 
 
 ###  Simple example
