@@ -4,6 +4,16 @@
 
 ******************************************************************************/
 
+.border-less-pane{
+	-fx-background-color: transparent;
+}
+
+.transparent-window {
+	-fx-background-color: rgb(0,0,0,0.3);
+	-fx-border-color: orange;
+	-fx-border-width: 2;
+}
+
 /* Universal */
 .leftPane:hover , .rightPane:hover , .topPane:hover , .bottomPane:hover , .topLeftPane:hover , .topRightPane:hover , .bottomRightPane:hover , .bottomLeftPane:hover {	
 	-fx-background-color:rgb(255.0,0.0,0.0,0.8);

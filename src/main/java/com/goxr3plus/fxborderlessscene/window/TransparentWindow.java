@@ -3,34 +3,16 @@
  */
 package com.goxr3plus.fxborderlessscene.window;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.stage.*;
 
 /**
  * @author GOXR3PLUS
  *
  */
 public class TransparentWindow extends StackPane {
-	
-	//--------------------------------------------------------
-	
-	@FXML
-	private StackPane stackPane;
-	
-	//--------------------------------------------------------
-	
-	/** The logger. */
-	private Logger logger = Logger.getLogger(getClass().getName());
 	
 	/** The Window */
 	private Stage window = new Stage();
@@ -47,32 +29,15 @@ public class TransparentWindow extends StackPane {
 	 * Constructor
 	 */
 	public TransparentWindow() {
-		
-		// ------------------------------------FXMLLOADER
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/TransparentWindow.fxml"));
-		loader.setController(this);
-		loader.setRoot(this);
-		
-		try {
-			loader.load();
-		} catch (IOException ex) {
-			logger.log(Level.SEVERE, "", ex);
-		}
-		
+		getStyleClass().add("transparent-window");
+		getStylesheets().add(getClass().getResource("/css/borderless-scene.css").toExternalForm());
 		//Window
 		window.setTitle("Transparent Window");
 		window.initStyle(StageStyle.TRANSPARENT);
 		window.initModality(Modality.NONE);
 		window.setScene(new Scene(this, Color.TRANSPARENT));
 	}
-	
-	/**
-	 * Called as soon as .fxml is initialized
-	 */
-	@FXML
-	private void initialize() {
-		
-	}
+
 	
 	/**
 	 * @return the window
