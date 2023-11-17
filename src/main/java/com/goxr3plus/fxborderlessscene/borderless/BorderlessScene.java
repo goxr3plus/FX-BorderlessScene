@@ -141,6 +141,15 @@ public class BorderlessScene extends Scene {
 	}
 
 	/**
+	 * Diable/enable the maximizable of you stage. Enabled by default.
+	 *
+	 * @param bool false to disable, true to enable
+	 */
+	public void setMaximizable(boolean bool) {
+		controller.setMaximizable(bool);
+	}
+
+	/**
 	 * Disable/enable the Aero Snap of your stage. Enabled by default.
 	 *
 	 * @param bool false to disable, true to enable.
