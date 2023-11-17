@@ -36,6 +36,8 @@ public class BorderlessController {
 
 	/** The maximized. */
 	private SimpleBooleanProperty maximized;
+	/** The maximizable and minimizable */
+	private SimpleBooleanProperty maximizable;
 
 	/** The resizable **/
 	private SimpleBooleanProperty resizable;
@@ -93,6 +95,7 @@ public class BorderlessController {
 		prevSize = new Delta();
 		prevPos = new Delta();
 		maximized = new SimpleBooleanProperty(false);
+		maximizable = new SimpleBooleanProperty(true);
 		resizable = new SimpleBooleanProperty(true);
 		snap = new SimpleBooleanProperty(true);
 		snapped = false;
@@ -175,6 +178,9 @@ public class BorderlessController {
 	 * Maximize on/off the application.
 	 */
 	protected void maximize() {
+		if (!maximizable.get()) {
+			return;
+		}
 		Rectangle2D screen;
 
 		try {
@@ -624,6 +630,15 @@ public class BorderlessController {
 	 */
 	protected void setResizable(boolean bool) {
 		resizable.set(bool);
+	}
+
+	/**
+	 * Diable/enable the maximizable of you stage. Enabled by default.
+	 *
+	 * @param bool false to disable, true to enable
+	 */
+	protected void setMaximizable(boolean bool) {
+		maximizable.set(bool);
 	}
 
 	/**
